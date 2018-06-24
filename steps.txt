@@ -1,0 +1,13 @@
+﻿npm install cors@latest --save
+npm install source-map-explorer --save-dev
+ng build --prod --build-optimizer
+ng build --prod --sourcemaps
+source-map-explorer ../../dist/main.b3d8cfd6748218799123.bundle.js
+
+npm install -- save @types/googlemaps
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+
+
+npm install --save angular/material2-builds@next angular/cdk-builds@next

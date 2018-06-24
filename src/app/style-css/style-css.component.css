@@ -1,0 +1,39 @@
+/*triangle style*/
+.tri{
+    height: 0px;
+    width: 0px;
+    background-color: blue;
+    border-top: 100px solid red;
+    border-right: 100px solid yellow;
+    border-left: 100px solid black;
+    border-bottom: 100px solid violet;
+} 
+.triOne{
+    height: 0px;
+    width: 0px;
+    background-color: blue;
+    border-top: 100px solid red;
+    border-right: 100px solid yellow;
+    border-left: 100px solid black;
+    border-bottom: 100px solid violet;
+}
+.tri2{
+    height: 0px;
+    width: 0px;
+    border-top: 100px solid transparent;
+    border-right: 100px solid yellow;
+    border-left: 100px solid black transparent;
+    border-bottom: 100px solid transparent;
+}
+
+/*css psudo elements*/
+
+p:hover::after{
+    content: "I am injecte after p tag"
+}
+
+/*data attributes in css*/
+.profile:hover::before{
+    display: inline-block;
+    content: attr(data-name);
+}
