@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { RouteoneComponent } from './routeone/routeone.component';
 import { RoutetwoComponent } from './routetwo/routetwo.component';
 import { GoogleMapComponent } from './googlemap/googlemap.component';
@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { BehaviorSubjectService } from './behaviour-subject.service';
+import { AuthGuard } from './auth-guard.service';
 
 import { AppComponent } from './app.component';
 import { ParentComponent } from './parenttochild-inp/parent/parent.component';
@@ -22,6 +23,7 @@ import { BsOneComponent } from './bs-one/bs-one.component';
 import { BsTwoComponent } from './bs-two/bs-two.component';
 import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject.component';
 import { IndexdbStorageComponent } from './indexdb-storage/indexdb-storage.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { IndexdbStorageComponent } from './indexdb-storage/indexdb-storage.compo
     BsOneComponent,
     BsTwoComponent,
     BehaviourSubjectComponent,
-    IndexdbStorageComponent
+    IndexdbStorageComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,
@@ -50,21 +53,33 @@ import { IndexdbStorageComponent } from './indexdb-storage/indexdb-storage.compo
  HttpClientModule,
 RouterModule.forRoot(
       [
-        { path: 'routeone', component: RouteoneComponent },
-        { path: 'routetwo', component: RoutetwoComponent },
+        { path: 'routeone', 
+          canActivate: [AuthGuard],
+          component: RouteoneComponent 
+        },
+        { path: 'routetwo', 
+        component: RoutetwoComponent,
+        canActivateChild: [AuthGuard],
+        children: [
+          {
+            path: 'bs',
+            component: BehaviourSubjectComponent
+          }
+        ]      
+      },
         { path: 'googlemap', component: GoogleMapComponent },
         { path: 'parent', component: ParentComponent },
         { path: 'viewchildparent', component: ViewChildParentComponent }, 
-        { path: 'bs', component: BehaviourSubjectComponent },
         { path: 'indexdb', component: IndexdbStorageComponent },
         { path: 'stylecss', component: StyleCssComponent },
         { path: 'jsconcepts', component: JsconceptsComponent },       
-        { path: '**', redirectTo: '/routetwo' }
+        { path: '**', redirectTo: '/' }
       ]
     )
   ],
   providers: [HttpClientModule,
-    BehaviorSubjectService
+    BehaviorSubjectService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

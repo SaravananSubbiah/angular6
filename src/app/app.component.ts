@@ -1,7 +1,6 @@
 import { Component, OnInit  } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router, NavigationEnd } from "@angular/router";
-
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { AppService } from './app.service';
 import { DemoService } from './demo.service';
@@ -199,6 +198,12 @@ function logMyErrors(e) {
      () => console.log('done loading users')
    );
  }
+
+
+
+goBack() {
+  this.router.navigate(['/']);
+}
 
 }
 

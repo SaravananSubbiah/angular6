@@ -1,0 +1,8 @@
+<p>
+  users-list works!
+</p>
+<input type="text" [(ngModel)] = "searchUser" (keyup)="SearchUser()" />
+<button (click) = "SearchUser()">Search</button>
+<ul>
+  <option *ngFor="let user of users">{{user.login}}</option>
+</ul>
