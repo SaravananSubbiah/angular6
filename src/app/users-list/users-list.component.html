@@ -4,5 +4,11 @@
 <input type="text" [(ngModel)] = "searchUser" (keyup)="SearchUser()" />
 <button (click) = "SearchUser()">Search</button>
 <ul>
-  <option *ngFor="let user of users">{{user.login}}</option>
+  <!--<option *ngFor="let user of users">{{user.login}}</option>
+   <button *ngFor="let user of users" [routerLink]="['user', user.id]">{{user.login}}</button> --> 
 </ul>
+<div><button (click)="goBack()">Go Back</button></div>
+<div *ngFor="let user of users" [routerLink]="['user', user.id]">
+   <button >{{user.login}}</button>
+</div>
+

@@ -12,13 +12,17 @@ export class UsersListComponent implements OnInit {
   users: UserResponse[];
   constructor(private _appService: AppService) {
 
-    this._appService.getUsers().subscribe(data=>this.users = data);
+    this._appService.getUsers().subscribe(data=>this.users = data); 
+   
    }
 
   ngOnInit() {
       //this._appService.getUsers().subscribe(data=>this.users = data.filter(u => u.login == 'mojombo'));
       //this.users = this._appService.getUsers2();
   }
+
+
+
   SearchUser(){
     this.users = this.users.filter(u => u.login.includes(this.searchUser));
   }
@@ -26,6 +30,7 @@ export class UsersListComponent implements OnInit {
 
 interface UserResponse {
   login: string;
+  id:string;
   type: string;
   organizations_url: string;
 }

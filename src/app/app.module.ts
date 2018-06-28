@@ -24,6 +24,7 @@ import { BsTwoComponent } from './bs-two/bs-two.component';
 import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject.component';
 import { IndexdbStorageComponent } from './indexdb-storage/indexdb-storage.component';
 import { UsersListComponent } from './users-list/users-list.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { UsersListComponent } from './users-list/users-list.component';
     BsTwoComponent,
     BehaviourSubjectComponent,
     IndexdbStorageComponent,
-    UsersListComponent
+    UsersListComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +74,8 @@ RouterModule.forRoot(
         { path: 'viewchildparent', component: ViewChildParentComponent }, 
         { path: 'indexdb', component: IndexdbStorageComponent },
         { path: 'stylecss', component: StyleCssComponent },
-        { path: 'jsconcepts', component: JsconceptsComponent },       
+        { path: 'jsconcepts', component: JsconceptsComponent },
+        { path: 'user/:Id', component: UserComponent },       
         { path: '**', redirectTo: '/' }
       ]
     )
