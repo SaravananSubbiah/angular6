@@ -25,6 +25,13 @@ import { BehaviourSubjectComponent } from './behaviour-subject/behaviour-subject
 import { IndexdbStorageComponent } from './indexdb-storage/indexdb-storage.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserComponent } from './user/user.component';
+import { ChildtoparentOutComponent } from './childtoparent-out/childtoparent-out.component';
+import { OutputParentComponent } from './childtoparent-out/parent/parent.component';
+import { OutputChildComponent } from './childtoparent-out/child/child.component';
+import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
+import { CounterComponent } from './ngcontentsample/counter/counter.component';
+import { WrapperComponent } from './ngcontentsample/wrapper/wrapper.component';
+import { NgcontentsampleComponent } from './ngcontentsample/ngcontentsample.component';
 
 
 @NgModule({
@@ -35,8 +42,8 @@ import { UserComponent } from './user/user.component';
     GoogleMapComponent,
     ParentComponent,
     ChildComponent,
-    ParentComponent,
-    ChildComponent,
+    OutputParentComponent,
+    OutputChildComponent,
     ViewChildParentComponent,
     ViewChildChildComponent,
     StorageComponent,
@@ -47,7 +54,12 @@ import { UserComponent } from './user/user.component';
     BehaviourSubjectComponent,
     IndexdbStorageComponent,
     UsersListComponent,
-    UserComponent
+    UserComponent,
+    ChildtoparentOutComponent,
+    NgtemplateComponent,
+    CounterComponent,
+    WrapperComponent,
+    NgcontentsampleComponent
   ],
   imports: [
     BrowserModule,
@@ -69,9 +81,12 @@ RouterModule.forRoot(
           }
         ]      
       },
+      { path: 'bs', component: BehaviourSubjectComponent },
         { path: 'googlemap', component: GoogleMapComponent },
-        { path: 'parent', component: ParentComponent },
-        { path: 'viewchildparent', component: ViewChildParentComponent }, 
+        { path: 'parent', component: OutputParentComponent },
+        { path: 'viewchildparent', component: ViewChildParentComponent },
+        { path: 'ngtemplate', component: NgtemplateComponent}, 
+        { path: 'ngcontent', component: NgcontentsampleComponent},        
         { path: 'indexdb', component: IndexdbStorageComponent },
         { path: 'stylecss', component: StyleCssComponent },
         { path: 'jsconcepts', component: JsconceptsComponent },

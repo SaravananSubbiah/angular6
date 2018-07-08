@@ -1,10 +1,59 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>
-  Welcome to {{title}}!!
-  </h1>
-  <button (click)= "sendEvent()">{{value}}</button>
+
+<div>
+  <div class="flex-container sticky">
+    <span class="sticky">
+      <h1 style="display:inline;">
+        Welcome to {{title}}!!
+      </h1>
+      <h1 style="display:inline;">Tour of Angular Concepts&nbsp;&nbsp;</h1>
+      <h2 style="display:inline;">spanning here.</h2>
+    </span>
+  </div>
+  <div class="flex-container sticky">
+    <div>
+      <a routerLink="/parent">Parent</a>
+    </div>
+    <div>
+      <a routerLink="/bs">BehaviorSubject</a>
+    </div>
+    <div>
+      <a routerLink="/indexdb">IndexDBStorage</a>
+    </div>
+    <div>
+      <a routerLink="/stylecss">StyleCSS</a>
+    </div>
+    <div>
+      <a routerLink="/jsconcepts">JS Concepts</a>
+    </div>
+    <div>
+      <a routerLink="/viewchildparent">viewchildparent</a>
+    </div>
+    <div>
+      <a routerLink="/ngtemplate">ng-template</a>
+    </div>
+    <div>
+        <a routerLink="/ngcontent">ng-content</a>
+      </div>
+  </div>
+  <div style="padding-bottom:20px">
+    <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+    <p>Scroll back up to remove the stickyness.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum,
+      altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec
+      et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum,
+      altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec
+      et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+      <button (click)="sendEvent()">{{value}}</button>
   <router-outlet></router-outlet>
-  <!-- <h2>Users</h2>
+  </div>
+  
+</div>
+
+
+
+<!-- <h2>Users</h2>
   <ul>
   <li *ngFor="let user of users">
     Name : {{user.login}}
@@ -16,25 +65,6 @@
   <li *ngFor="let food of foods">
     Name : {{food.name}}
   </li>
-  </ul>  -->
- <br/> 
-  <a routerLink="/parent">Parent</a>
-<br/>
-<a routerLink="/bs">BehaviorSubject</a>
-<br/>
-<a routerLink="/indexdb">IndexDBStorage</a>
-<br/>
-<a routerLink="/stylecss">StyleCSS</a>
-<br/>
-<a routerLink="/jsconcepts">JS Concepts</a>
-<br/>
-<!-- <a routerLink="/stylecss">StyleCSS</a>
-<br/> -->
-
-<a routerLink="/viewchildparent">viewchildparent</a>
+  </ul>  
 <app-googlemap></app-googlemap>
-<app-users-list></app-users-list>
-
-
-    
-
+<app-users-list></app-users-list>-->
