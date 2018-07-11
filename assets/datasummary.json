@@ -1,0 +1,84 @@
+[
+    {   
+        "vendorCode" : "PPS",
+        "streetName" : "BroadWay9",
+        "assigned" : "50",
+        "unAssinged" : "100",
+        "zipCode" : "10010",
+        "district" : "BD",
+        "inspDueDate":"6/25/2017"
+    },
+    {   
+        "vendorCode" : "PPS",
+        "streetName" : "BroadWay8",
+        "assigned" : "50",
+        "unAssinged" : "100",
+        "zipCode" : "10010",
+        "district" : "BD",
+        "inspDueDate":"6/25/2017"
+    },
+    {   
+        "vendorCode" : "PPS",
+        "streetName" : "BroadWay7",
+        "assigned" : "50",
+        "unAssinged" : "100",
+        "zipCode" : "10011",
+        "district" : "NonBD",
+        "inspDueDate":"6/25/2017"
+    },
+    {   
+        "vendorCode" : "PPS",
+        "streetName" : "BroadWay6",
+        "assigned" : "50",
+        "unAssinged" : "100",
+        "zipCode" : "10011",
+        "district" : "NonBD",
+        "inspDueDate":"6/25/2017"
+    },
+    {   
+        "vendorCode" : "PPS",
+        "streetName" : "BroadWay5",
+        "assigned" : "50",
+        "unAssinged" : "100",
+        "zipCode" : "10012",
+        "district" : "NonBD",
+        "inspDueDate":"6/25/2017"
+    },
+    {   
+        "vendorCode" : "PPS",
+        "streetName" : "BroadWay4",
+        "assigned" : "50",
+        "unAssinged" : "100",
+        "zipCode" : "10012",
+        "district" : "BD",
+        "inspDueDate":"6/25/2017"
+    },
+    {   
+        "vendorCode" : "PPS",
+        "streetName" : "BroadWay3",
+        "assigned" : "50",
+        "unAssinged" : "100",
+        "zipCode" : "10010",
+        "district" : "NonBD",
+        "inspDueDate":"6/25/2017"
+    },
+    {   
+        "vendorCode" : "PPS",
+        "streetName" : "BroadWay2",
+        "assigned" : "50",
+        "unAssinged" : "100",
+        "zipCode" : "10012",
+        "district" : "BD",
+        "inspDueDate":"6/25/2017"
+    },
+    {   
+        "vendorCode" : "PPS",
+        "streetName" : "BroadWay1",
+        "assigned" : "50",
+        "unAssinged" : "100",
+        "zipCode" : "10012",
+        "district" : "NonBD",
+        "inspDueDate":"6/25/2017"
+    }
+
+]
