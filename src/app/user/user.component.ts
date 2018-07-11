@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from '../app.service';
 import { Router, NavigationEnd } from "@angular/router";
 import { ActivatedRoute} from "@angular/router";
@@ -15,16 +15,56 @@ userName: string;
 user: UserResponse;
 userId : string;
 tuserId : string;
+
+@Input('user') data: string;
   
 constructor(private _appService : AppService,private _activeroute: ActivatedRoute, _router: Router) {
   
 }
 
+
+  // constructor() {
+  //   console.log(`new - data is ${this.data}`);
+  // }
+
+  ngOnChanges() {
+    console.log(`ngOnChanges - data is ${this.data}`);
+  }
+
   ngOnInit() {
-      this.SearchUserById();
+    this.SearchUserById();
+    console.log(`ngOnInit  - data is ${this.data}`);
+  }
+
+  ngDoCheck() {
+    console.log("ngDoCheck")
+  }
+
+  ngAfterContentInit() {
+    console.log("ngAfterContentInit");
+  }
+
+  ngAfterContentChecked() {
+    console.log("ngAfterContentChecked");
+  }
+
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit");
+  }
+
+  ngAfterViewChecked() {
+    console.log("ngAfterViewChecked");
+  }
+
+  ngOnDestroy() {
+    console.log("ngOnDestroy");
+  }
+
+  // ngOnInit() {
+  //     this.SearchUserById();
       
 
-  }
+  // }
   SearchUserById(){
     this._activeroute.params.subscribe( 
       params => {

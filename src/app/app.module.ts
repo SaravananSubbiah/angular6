@@ -90,6 +90,7 @@ RouterModule.forRoot(
         { path: 'indexdb', component: IndexdbStorageComponent },
         { path: 'stylecss', component: StyleCssComponent },
         { path: 'jsconcepts', component: JsconceptsComponent },
+        { path: 'userlist', component: UsersListComponent },
         { path: 'user/:Id', component: UserComponent },       
         { path: '**', redirectTo: '/' }
       ]
